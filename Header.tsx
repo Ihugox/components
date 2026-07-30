@@ -5,21 +5,45 @@ export default function Header() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "16px",
-        backgroundColor: "#0F172A",
-        color: "#FFFFFF",
+        padding: "18px 20px",
+        background: "#101B2D",
+        borderBottom: "1px solid #334155",
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
       }}
     >
-      <h1>⚽ Football Pro Analyzer</h1>
+      <div>
+        <h2
+          style={{
+            fontSize: "22px",
+            fontWeight: "700",
+            color: "#FFFFFF",
+          }}
+        >
+          ⚽ Football Pro
+        </h2>
+
+        <p
+          style={{
+            color: "#94A3B8",
+            fontSize: "13px",
+            marginTop: "4px",
+          }}
+        >
+          Análises profissionais de partidas
+        </p>
+      </div>
 
       <button
         style={{
-          background: "none",
-          border: "1px solid #334155",
-          color: "#FFFFFF",
-          padding: "8px 12px",
-          borderRadius: "8px",
-          cursor: "pointer",
+          width: "45px",
+          height: "45px",
+          borderRadius: "50%",
+          border: "none",
+          background: "#2563EB",
+          color: "#FFF",
+          fontSize: "22px",
         }}
       >
         👤

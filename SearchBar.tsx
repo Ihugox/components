@@ -1,18 +1,18 @@
 export default function SearchBar() {
   return (
-    <div style={{ padding: "16px" }}>
+    <div style={{ padding: "20px" }}>
       <input
         type="text"
-        placeholder="🔍 Pesquisar time ou campeonato..."
+        placeholder="🔎 Pesquisar jogo, time ou campeonato..."
         style={{
           width: "100%",
-          padding: "12px",
-          borderRadius: "10px",
+          padding: "16px",
+          borderRadius: "14px",
           border: "1px solid #334155",
-          backgroundColor: "#1E293B",
+          background: "#101B2D",
           color: "#FFFFFF",
           fontSize: "16px",
-          boxSizing: "border-box",
+          outline: "none",
         }}
       />
     </div>

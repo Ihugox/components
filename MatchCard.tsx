@@ -1,4 +1,4 @@
-        type MatchCardProps = {
+type MatchCardProps = {
   league: string;
   homeTeam: string;
   awayTeam: string;
@@ -19,38 +19,89 @@ export default function MatchCard({
     <div
       style={{
         background: "#1E293B",
-        color: "#FFF",
-        padding: "16px",
-        borderRadius: "12px",
-        marginBottom: "16px",
+        borderRadius: "16px",
+        padding: "20px",
+        marginBottom: "20px",
+        color: "#FFFFFF",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
       }}
     >
-      <h3>{league}</h3>
+      <p
+        style={{
+          color: "#94A3B8",
+          fontSize: "14px",
+          marginBottom: "10px",
+        }}
+      >
+        🏆 {league}
+      </p>
 
-      <h2>
+      <h2
+        style={{
+          fontSize: "24px",
+          marginBottom: "10px",
+        }}
+      >
         {homeTeam} × {awayTeam}
       </h2>
 
       <p>🕒 {time}</p>
 
-      <p>📊 Confiança: {confidence}%</p>
+      <div
+        style={{
+          marginTop: "15px",
+          marginBottom: "15px",
+        }}
+      >
+        <p>Confiança da IA</p>
 
-      <p style={{ color: valueBet ? "#22C55E" : "#EF4444" }}>
-        {valueBet ? "💎 Value Bet encontrada" : "❌ Sem Value Bet"}
+        <div
+          style={{
+            background: "#334155",
+            height: "10px",
+            borderRadius: "10px",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              width: `${confidence}%`,
+              height: "100%",
+              background: "#22C55E",
+            }}
+          />
+        </div>
+
+        <p>{confidence}%</p>
+      </div>
+
+      <p
+        style={{
+          color: valueBet ? "#22C55E" : "#EF4444",
+          fontWeight: "bold",
+        }}
+      >
+        {valueBet
+          ? "💎 Value Bet encontrada"
+          : "❌ Nenhuma Value Bet"}
       </p>
 
       <button
         style={{
+          marginTop: "15px",
           width: "100%",
-          padding: "12px",
+          padding: "14px",
+          borderRadius: "12px",
           border: "none",
-          borderRadius: "8px",
           background: "#2563EB",
           color: "#FFF",
+          fontSize: "16px",
+          fontWeight: "bold",
+          cursor: "pointer",
         }}
       >
         Ver análise
       </button>
     </div>
   );
-}
+                  }
